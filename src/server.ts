@@ -16,12 +16,17 @@ const Login = async ( user : user) => {
     console.log(`email:  ${email}`);
     console.log(`password: ${password}`);
     
-    // Add email to queue
+    // Add email to queue (non-blocking, returns immediately)
     await emailQueue.addEmailToQueue(email, "Welcome to our service!");
+    console.log("✅ Email added to queue! Worker will process it.");
 }
 
-Login({
-    email: 'shreetejmeshram07@gmail.com',
-    password: 'password123'
-})
-
+(async () => {
+    await Login({
+        email: 'shreetejmeshram07@gmail.com',
+        password: 'password123'
+    });
+    
+    // Keep server running so worker can process emails
+    console.log("🚀 Server running...");
+})();
