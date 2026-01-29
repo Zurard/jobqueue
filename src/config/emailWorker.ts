@@ -1,6 +1,5 @@
 import Redis from "ioredis";
 import nodemailer from "nodemailer"
-import { Queue } from "./queue";            
 
 const redis = new Redis();
 

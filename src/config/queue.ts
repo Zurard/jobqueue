@@ -1,5 +1,7 @@
 import Redis from "ioredis";
 import { processEmailQueue } from "./emailWorker";
+
+//this was me first time trying to find out how redis works   
 // trying to setup a redis client 
 // redis.set("emailQueue", "hello this is a test email");
 // redis.get("emailQueue").then((result: string | null) => {

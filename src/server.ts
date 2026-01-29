@@ -18,6 +18,7 @@ const Login = async ( user : user) => {
     
     // Add email to queue (non-blocking, returns immediately)
     await emailQueue.addEmailToQueue(email, "Welcome to our service!");
+    await emailQueue.startProcessing();
     console.log("✅ Email added to queue! Worker will process it.");
 }
 
