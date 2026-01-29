@@ -18,7 +18,7 @@ class Queue {
 
     constructor(redis: Redis, queueName: string) {
         this.redis = redis;
-        this.queueName = "dukaron";
+        this.queueName = "emailQueue";
     }
 
  //now we need to add functions which we can 
